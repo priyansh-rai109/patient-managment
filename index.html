@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏥 Patient Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header-bar">
+    <h1>🏥 Patient Management System</h1>
+  </div>
+
+  <div class="container">
+
+    <!-- Add Patient Form -->
+    <div class="form card">
+      <h2>Add / Edit Patient</h2>
+      <form id="patientForm">
+        <input type="hidden" id="editIndex">
+        <div class="inputs">
+          <input type="number" id="id" placeholder="Patient ID" required>
+          <input type="text" id="name" placeholder="Name" required>
+          <input type="number" id="age" placeholder="Age" required>
+          <input type="text" id="disease" placeholder="Disease" required>
+        </div>
+        <div class="buttons">
+          <button type="submit" class="btn green">➕ Add / Update Patient</button>
+          <button type="button" class="btn red" id="clearBtn">Clear All</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Patient Table -->
+    <div class="table-wrapper card">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Disease</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="patientTable"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
